@@ -1,0 +1,25 @@
+<meta charset="utf8">
+<script language="javascript">
+	var answer = parseInt(Math.random() * 100) + 1;
+	var i = 0;
+	var attempt = 1;
+	while(true){
+	var userAnswer = parseInt(prompt('Игра Угадайка. Я загадал число от 1 до 100. Попробуйте угадать его:'));	
+	if(userAnswer >= 1 && userAnswer <= 100) {
+		if(answer == userAnswer){
+			alert('Поздравляю! Вы угадали!!!');
+			break;
+			}
+		else if(answer > userAnswer) {
+			alert('Не угадал! Твое число слишком маленькое!');
+			}
+		else {
+			alert('Не угадал! Твое число слишком большое!');
+		} 
+		
+	} else alert('Число не подходит. Введите число от 1 до 100');
+	++i;
+	++attempt;
+}
+	alert('Игра закончена! Вы угадали число за ' + attempt + ' попыток :-)');
+</script>
